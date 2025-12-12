@@ -1,0 +1,14 @@
+﻿Private Sub Worksheet_Change(ByVal Target As Range)
+
+    On Error Resume Next
+
+    ' Solo procesar si es una hoja del cronograma
+    If Not modAutocomplete.EsHojaCronograma(Me.Name) Then Exit Sub
+
+    ' Si la celda cambiada está vacía, no hacemos nada
+    If Trim$(Target.Value) = "" Then Exit Sub
+
+    ' Llamar al detector de autocompletado
+    Call modAutocomplete.DetectarAutocompletado(Target)
+
+End Sub

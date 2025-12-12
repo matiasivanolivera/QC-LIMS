@@ -1,0 +1,22 @@
+# Excel files
+*.xlb
+*.tmp
+~$*
+
+# Backup files
+*.bak
+*.tmp
+*.orig
+
+# Rubberduck temp
+/.rubberduck/
+
+/bin/
+/obj/
+
+# Office autosaves
+*.asd
+*.wbk
+
+# Ignore Excel binary cache folders
+*.exd
